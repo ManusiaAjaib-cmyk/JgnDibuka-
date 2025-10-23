@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aqua;
+}
+
+.background{
+    justify-items: center;
+    height: 650px;
+    width: 1900px;
+}
+
+.jendela{
+    border: 2px solid black;
+    height: 300px;
+    width: 350px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16%;
+    padding: 50px;
+    background-color: antiquewhite;
+    justify-items: center;
+
+}
+
+button{
+    width: 100px;
+    margin-top: 50px;
+    font-size: 35px;
+    background-color: azure;
+    border-radius: 10px;
+}
+
+.tombol{
+    width: 350px;
+    justify-content: space-between;
+    padding-left: 20%;
+}
+
+#b2{
+    margin-left: 40px;
+    color: red;
+}
+
+#b1{
+    color: green;
+}
+
+#b1:hover{
+    background-color: lightgreen;
+}
+
+#b2:hover{
+    background-color: lightcoral;
+}
+
+.text2{
+    text-align: center;
+}
+
+.gif{
+    justify-items: center;
+}
+
+.aud{
+    justify-self: center;
+}
+
+@media(max-width: 480px){
+    .background{
+        height: 650px;
+        width: 480px;
+    }
+
+    .jendela{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50%;
+        height: 250px;
+        width: 250px;
+    }
+
+    h1{
+        text-size-adjust: 70%;
+    }
+
+    button{
+        width: 70px;
+        font-size: 25px;
+    }
+
+    .tombol{
+    width: 250px;
+    justify-content: space-between;
+    padding-left: 20%;
+    }
+
+    #b2:hover{
+        background-color: azure;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="jendela" id="win">
+            <h1>Apakah Kamu Gay?</h1>
+            <div class="tombol">
+                <button id="b1" onclick="yes()">ya</button>
+                <button id="b2" onmousemove="move()">tidak</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let b=0;
+let move=()=>{
+    b++;
+    b2.style.position="absolute";
+    if (b==1){
+        b2.style.top="5%"
+        b2.style.right="5%"
+    }
+    else if(b==2){
+        b2.style.top="75%"
+        b2.style.right="85%"
+    }
+    else if(b==3){
+        b2.style.top="14%"
+        b2.style.right="65%"
+    }
+    else if(b==4){
+        b2.style.top="72%"
+        b2.style.right="33%"
+    }
+    else if(b==5){
+        b2.style.top="35%"
+        b2.style.right="25%"
+    }
+    else if(b==6){
+        b2.style.top="5%"
+        b2.style.right="75%"
+    }
+    else if(b==7){
+        b2.style.top="79%"
+        b2.style.right="22%"
+    }
+    else if(b==8){
+        b2.style.top="14%"
+        b2.style.right="12%"
+    }
+    else if(b==9){
+        b2.style.top="35%"
+        b2.style.right="5%"
+    }
+    else{
+        b2.style.top="15%"
+        b2.style.right="72%"
+        b=0;
+    }
+}
+
+let yes=()=>{
+    win.innerHTML=`
+    <h1 class="text2">Aku Tau</h1>
+    <div>
+     <img src="assets/dexter-james-doakes.gif" class="gif">
+    </div>
+    <audio controls autoplay class="aud">
+        <source src="assets/dexter-made-with-Voicemod.mp3" type="audio/mpeg">
+    </audio>
+    `
+    win.style.height="300px"
+}
+    </script>
+</body>
+</html>
